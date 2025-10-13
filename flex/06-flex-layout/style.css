@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +18,10 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  /* 
+  padding: 8px 16px; means add 8px padding to top and bottom, 16px padding to left and right
+  */
+  padding: 8px 16px;
 }
 
 input {
@@ -24,4 +30,46 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background-color: #eee;
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.content {
+/* 
+`flex: 1;` is shorthand for `flex: 1 1 0;`
+- Grow to fill available space (flex-grow: 1).
+- Shrink if necessary (flex-shrink: 1).
+- Start with a base size of 0 (flex-basis: 0).
+
+`flex-direction: column;` makes the flex container stack its children vertically
+*/
+
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  /* change text color */
+  color: #666;
+  /* remove underline */
+  text-decoration: none; 
 }
